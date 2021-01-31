@@ -1,0 +1,92 @@
+<html>
+
+<html xmlns:th="http://thymeleaf.org"
+ 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">	
+
+<head>
+	<title >CartorioApp</title>
+	 <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+
+
+
+
+<body>
+		
+		<header>
+		<nav class="menu">
+		    <div class="nav-wrapper">
+		      <a href="#" class="brand-logo">Cartorio</a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="/cartorio" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Lista de cartorios</a></li>
+		      </ul>
+		    </div>
+		</nav>
+	</header>
+		
+		
+		
+		
+		<div th:each="cartorio : ${cartorio}" class="container detalhesCartorio">
+		<h5>Detalhes do Cart&oacute;rio</h5>
+		<div class="row">
+			<p>Nome: <span th:text="${cartorio.nome}"></span></p>
+			<p>Endereco: <span th:text="${cartorio.endereco}"></span></p>
+			</div>		
+		</div>
+		
+		
+		
+		
+		<th:block th:include="mensagemValidacao"></th:block>
+		<div class="container formCertidao">
+		<h5>Cadastrar Certid&atilde;o</h5>
+		<form method="post" th:object="${certidao}">
+			<div class="row">
+				<div class="input-field col s6">
+				Nome: <input type="text" value="" name="nomeCertidao" placeholder="Nome da Certidao"/>
+			
+			<button class="waves-effect waves-light btn" type="submit">Adicionar Certidao</button>
+				</div>
+			</div>
+		</form>
+		</div>
+		
+		
+		<table class="container tabelaCertidao">
+		<thead>
+			<tr>
+				<th>Certid&otilde;es Cadastradas</th>
+				<th>Deletar</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="certidao : ${certidao}">
+				<td><span th:text="${certidao.nomeCertidao}"></span></td>			
+				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('CC#deletarCertidao').arg(0, certidao.nomeCertidao)).build()}"><i class="material-icons left">delete</i></a></td>
+			</tr>
+		</tbody>
+	</table>
+		
+		
+		
+		
+		
+		
+		
+		
+		      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+		
+		
+		
+</body>
+	
+
+</html>
