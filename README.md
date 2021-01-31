@@ -15,4 +15,4 @@ Desafio proposto para criação de um sistema que cadastra cartorios e suas resp
 Na Pagina inicial clicar em "Cadastrar Cartorio"
 
 
-<img src="Cartorio\cartorioapp\src\main\resources\static\img1">
+<img src="https://github.com/LucasCicero/Cartorio/blob/master/cartorioapp/src/main/resources/static/img/img1.PNG">
