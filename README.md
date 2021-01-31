@@ -9,5 +9,5 @@ Desafio proposto para criação de um sistema que cadastra cartorios e suas resp
   <li>Materialize CSS</li>
  <ul>
  
- <h3><b>Funcionamento do Sistema</b></h3>
+ <h2>Funcionamento do Sistema</h2>
 
