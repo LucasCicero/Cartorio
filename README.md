@@ -1,4 +1,4 @@
-# Cartorio
+# Sistema Cartorioapp
 Desafio proposto para criação de um sistema que cadastra cartorios e suas respectivas certidoes, usando Springboot
 
 
@@ -9,5 +9,5 @@ Desafio proposto para criação de um sistema que cadastra cartorios e suas resp
   <li>Materialize CSS</li>
  <ul>
  
- <h2>Funcionamento do Sistema</h2>
+<h2>Funcionamento do Sistema</h2>
 
